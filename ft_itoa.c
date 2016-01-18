@@ -1,6 +1,16 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/01/18 18:20:56 by vde-mene          #+#    #+#             */
+/*   Updated: 2016/01/18 18:29:28 by vde-mene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 static int	ft_lenint(int cp)
 {
@@ -28,7 +38,7 @@ char		*ft_itoa(int n)
 {
 	int		nblen;
 	int		sign;
-	char		*res;
+	char	*res;
 
 	sign = ft_signint(n);
 	nblen = ft_lenint(n);
@@ -49,14 +59,4 @@ char		*ft_itoa(int n)
 			*--res = '-';
 	}
 	return (res);
-}
-
-int	main(void)
-{
-	int	nb = 2247483647;
-	char *c;
-
-	c = ft_itoa(nb);
-	printf("%s", c);
-	return (0);
 }
