@@ -1,6 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/11/27 13:47:03 by vde-mene          #+#    #+#             */
+/*   Updated: 2015/11/27 13:55:13 by vde-mene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strstr(const char *s1, const char *s2)
 {
@@ -17,23 +27,14 @@ char	*ft_strstr(const char *s1, const char *s2)
 	{
 		i = index;
 		j = 0;
-
 		while (s1[i] == s2[j])
 		{
 			i++;
 			j++;
 			if (s2[j] == '\0')
-			{
 				return ((char*)(&s1[index]));
-			}
 		}
 		index++;
-	}	
+	}
 	return (NULL);
 }
-
-int main( void )
-  {
-    printf( "%s\n", strstr("tosaltosalut le monde", "a") );
-    return EXIT_SUCCESS;
-  }

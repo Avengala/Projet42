@@ -1,30 +1,27 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/11/27 18:22:28 by vde-mene          #+#    #+#             */
+/*   Updated: 2015/11/27 18:22:46 by vde-mene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+#include "libft.h"
+
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	unsigned char	*str;
+ 	unsigned char	*str;
 
-	if (dest && src)
+	if (dst && src)
 	{
 		str = (unsigned char*)malloc(sizeof(*str) * n);
-		memcpy(str, src, n);
-		memcpy(dest, str, n);
-		free(str);
-		return (dest);
+		ft_memcpy(str, src, n);
+		ft_memcpy(dst, str, n);
+		return (dst);
 	}
-	return (NULL);
-}
-
-int main()
-{
-   const char dest[] = "unpeuoldstrong";
-   const char src[]  = "newstring";
-
-   printf("Before memmove dest = %s, src = %s\n", dest, src);
-   ft_memmove(&dest, &src, 9);
-   printf("After memmove dest = %s, src = %s\n", dest, src);
-
-   return(0);
+	return (dst);
 }

@@ -1,11 +1,21 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/11/27 11:59:11 by vde-mene          #+#    #+#             */
+/*   Updated: 2015/11/27 13:17:14 by vde-mene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*str;
-	size_t		index;
+	size_t			index;
 
 	index = 0;
 	str = (unsigned char *)s;
@@ -19,16 +29,4 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		n--;
 	}
 	return (NULL);
-}
-
-int main ()
-{
-  char * pch;
-  char str[] = "Example string";
-  pch = (char*) ft_memchr (str, 'p', strlen(str));
-  if (pch!=NULL)
-    printf ("'p' found at position %ld.\n", pch-str+1);
-  else
-    printf ("'p' not found.\n");
-  return 0;
 }

@@ -1,12 +1,22 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/11/27 12:35:30 by vde-mene          #+#    #+#             */
+/*   Updated: 2015/11/27 12:38:54 by vde-mene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libtf.h"
 
 void	*ft_strdup(const char *s1)
 {
 	char	*str;
-	int	size;
-	int	index;
+	int		size;
+	int		index;
 
 	index = 0;
 	size = (strlen(s1) + 1);
@@ -25,16 +35,6 @@ void	*ft_strdup(const char *s1)
 		index++;
 	}
 	str[index] = '\0';
-    	free (str);
+	free(str);
 	return (str);
-}
-
-int main( void )
-{
-    char *dup;
-
-    dup = ft_strdup( "Bonjour" );
-    printf( "%s\n", dup );
-
-    return EXIT_SUCCESS;
 }

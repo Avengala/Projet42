@@ -1,40 +1,31 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/11/27 11:29:09 by vde-mene          #+#    #+#             */
+/*   Updated: 2016/01/13 17:02:14 by vde-mene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+#include "libft.h"
+
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t		index;
-	unsigned char   *str;	
-	unsigned char   *string;	
+	size_t			index;
+	unsigned char	*str;
+	unsigned char	*string;
 
 	index = 0;
-	str = (unsigned char *) src;
-	string = (unsigned char *) dest;
+	str = (unsigned char *)src;
+	string = (unsigned char *)dst;
 	while (n != 0)
 	{
 		string[index] = str[index];
-		index++;		
+		index++;
 		n--;
 	}
-	return (dest);
-}
- 
-int main()
- {
-	 char A[12];
-	 char B[15];
-	 int I;
-
-	 for(I=0; I < 12; I++)
- 	{  		
-		A[I] = I;
-	 }
-	B[12] = 'a';
-	 ft_memcpy(&B,&A,12);
-	 for(I=0; I < 13; I++)
-	 {
-  		printf("B[%i] = %i\n",I,B[I]);
- 	}
- 	return (0);
+	return (dst);
 }

@@ -1,28 +1,27 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/11/27 12:39:21 by vde-mene          #+#    #+#             */
+/*   Updated: 2015/11/27 12:46:24 by vde-mene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char	*ft_strcpy(char *s1, const char *s2)
+#include "libft.h"
+
+char	*ft_strcpy(char *dst, const char *src)
 {
 	size_t	index;
 
 	index = 0;
-	while (s2[index] != '\0')
+	while (src[index] != '\0')
 	{
-		s1[index] = s2[index];
+		dst[index] = src[index];
 		index++;
 	}
-	s1[index] = '\0';
-	return (s1);
-}
-
-int main( void )
-{
-    char buffer[80];
-
-    ft_strcpy( buffer, "Hello " );
-
-    printf( "%s\n", buffer );
-
-    return EXIT_SUCCESS;
+	dst[index] = '\0';
+	return (dst);
 }

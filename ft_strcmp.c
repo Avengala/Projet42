@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/27 13:01:10 by vde-mene          #+#    #+#             */
-/*   Updated: 2015/11/27 13:01:53 by vde-mene         ###   ########.fr       */
+/*   Created: 2015/11/27 14:44:56 by vde-mene          #+#    #+#             */
+/*   Updated: 2015/11/27 16:15:30 by vde-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+int		ft_strcmp(const char *s1, const char *s2)
 {
+	char	*size_s1;
+	char	*size_s2;
 	size_t	index;
-	size_t	size;
 
-	size = 0;
 	index = 0;
-	index = strlen(s1);
-	while (s2[size] != '\0')
+	size_s1 = (char *)s1;
+	size_s2 = (char *)s2;
+	while (size_s1[index] != '\0' && size_s2[index] != '\0')
 	{
-		s1[index] = s2[size];
+		if (size_s1[index] != size_s2[index])
+		{
+			return (size_s1[index] - size_s2[index]);
+		}
 		index++;
-		size++;
 	}
-	s1[index] = '\0';
-	return (s1);
+	if (size_s1[index] == '\0' || size_s2[index] == '\0')
+	{
+		return (size_s1[index] - size_s2[index]);
+	}
+	return (0);
 }

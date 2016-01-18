@@ -1,28 +1,26 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/11/27 17:22:20 by vde-mene          #+#    #+#             */
+/*   Updated: 2015/11/27 17:22:28 by vde-mene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
-	if (isalpha(c))
+	if (ft_isdigit(c))
 	{
 		return (1);
 	}
-	if (isdigit(c))
+	else if (ft_isalpha(c))
 	{
 		return (1);
 	}
 	return (0);
-}
-
-int main()
-{
-	int I;
- 	for(I = 48; I <= 127; I++)
-	{
-  		printf("%c = %i, ",I,ft_isalnum(I)?1:0);
-	 }
-	 printf("\n");
-// a finir avec isalpha et isdigit
- 	return 0;
 }

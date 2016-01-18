@@ -1,17 +1,22 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/11/27 17:46:03 by vde-mene          #+#    #+#             */
+/*   Updated: 2015/11/27 17:49:37 by vde-mene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int             ft_tolower(int c)
-{
-        if (c >= 'A' && c <= 'Z')
-        {       
-                c = c + ('a' - 'A');
-        }
-        return (c);
-}
+#include "libft.h"
 
-int     main(void)
+int		ft_tolower(int c)
 {
-        printf("%c\n", ft_tolower('A'));
-        printf("%c\n", tolower('A'));
-        return (0);
+	if (c >= 'A' && c <= 'Z')
+	{
+		c = c + ('a' - 'A');
+	}
+	return (c);
 }

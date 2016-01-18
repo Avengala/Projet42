@@ -1,32 +1,26 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/11/27 11:19:19 by vde-mene          #+#    #+#             */
+/*   Updated: 2015/11/27 13:33:55 by vde-mene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
 	size_t		index;
 
 	index = 0;
-        while (n != 0)
-        {
-                ((unsigned char *)s)[index] = 0;
-                index++;
-                n--;
-        }
-}
-
-int main()
- {
-         char B[21];
-         int I;
-	for(I=0; I< 21; I++)
+	while (n != 0)
 	{
-		B[I]= I;
+		((unsigned char *)s)[index] = 0;
+		index++;
+		n--;
 	}
-        ft_bzero(&B, 10);
-         for(I=0; I < 21; I++)
-         {
-                printf("B[%i] = %i\n",I,B[I]);
-        }
-        return (0);
 }

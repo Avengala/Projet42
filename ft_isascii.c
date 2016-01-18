@@ -1,6 +1,18 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/11/27 17:26:55 by vde-mene          #+#    #+#             */
+/*   Updated: 2015/11/27 17:31:52 by vde-mene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_isascii(int c)
+#include "libft.h"
+
+int		ft_isascii(int c)
 {
 	if ((c >= 0 && c <= 127))
 	{
@@ -10,22 +22,4 @@ int ft_isascii(int c)
 	{
 		return (0);
 	}
-}
-
-int main()
-{
-        int I;
-        for(I = 48; I <= 127; I++)
-        {
-                printf("%c = %i, ",I,ft_isascii(I)?1:0);
-         }
-         printf("\n");
-        
-	for(I = 48; I <= 127; I++)
-        { 
-                printf("%c = %i, ",I,isascii(I)?1:0);
-	}
-	printf("\n");
-// a finir avec isalpha et isdigit
-        return 0;
 }

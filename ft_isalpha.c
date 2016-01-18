@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/27 13:01:10 by vde-mene          #+#    #+#             */
-/*   Updated: 2015/11/27 13:01:53 by vde-mene         ###   ########.fr       */
+/*   Created: 2015/11/27 16:51:02 by vde-mene          #+#    #+#             */
+/*   Updated: 2015/11/27 17:31:08 by vde-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+int		ft_isalpha(int c)
 {
-	size_t	index;
-	size_t	size;
-
-	size = 0;
-	index = 0;
-	index = strlen(s1);
-	while (s2[size] != '\0')
+	if (c >= 'a' && c <= 'z')
 	{
-		s1[index] = s2[size];
-		index++;
-		size++;
+		return (1);
 	}
-	s1[index] = '\0';
-	return (s1);
+	if (c >= 'A' && c <= 'Z')
+	{
+		return (1);
+	}
+	return (0);
 }

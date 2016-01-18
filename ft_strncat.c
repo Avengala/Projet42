@@ -1,33 +1,32 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/11/27 13:02:56 by vde-mene          #+#    #+#             */
+/*   Updated: 2015/11/27 13:07:20 by vde-mene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char    *ft_strncat(char *s1, const char *s2, size_t n)
+#include "libft.h"
+
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-        size_t  index;
-        size_t  size;
+	size_t	index;
+	size_t	size;
 
-        size =  0;
-        index = 0;
-        index = strlen(s1);
-        while (n != 0)
-        {
-                s1[index] = s2[size];
-                index++;
-                size++;
+	size = 0;
+	index = 0;
+	index = strlen(s1);
+	while (n != 0)
+	{
+		s1[index] = s2[size];
+		index++;
+		size++;
 		n--;
-        }
-        s1[index] = '\0';
-        return (s1);
-}
-
-int main( void )
-{
-    char buffer[80];
-
-   strcpy( buffer, "Hello " );
-   ft_strncat( buffer, "World ", 2 );
-    printf( "%s\n", buffer );
-
-    return EXIT_SUCCESS;
+	}
+	s1[index] = '\0';
+	return (s1);
 }

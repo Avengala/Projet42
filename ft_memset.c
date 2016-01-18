@@ -1,28 +1,29 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/11/27 11:03:30 by vde-mene          #+#    #+#             */
+/*   Updated: 2015/11/27 11:12:15 by vde-mene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void	*ft_memset(void *s, int c, size_t n)
+#include "libft.h"
+
+void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t		index;
+	size_t			index;
 	unsigned char	*string;
 
 	index = 0;
-	string = (unsigned char *) s;
-	while (n != 0)
+	string = (unsigned char *)b;
+	while (len != 0)
 	{
 		string[index] = (unsigned char)c;
 		index++;
-		n--;
+		len--;
 	}
-	return (s);
-}
- 
-int main()
-{
-    char DuplicateString[255];
-    ft_memset(&DuplicateString,'#',10);
-    DuplicateString[10] = 0;
-    printf("DuplicateString = %s\n",DuplicateString);
-    return 0;
+	return (b);
 }

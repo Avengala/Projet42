@@ -1,39 +1,32 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/11/27 13:45:05 by vde-mene          #+#    #+#             */
+/*   Updated: 2015/11/27 13:45:07 by vde-mene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char    *ft_strrchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
 {
-        unsigned char   *str;
-        size_t          index;
+	unsigned char	*str;
+	size_t			index;
 
-        index = 0;
-        str = (unsigned char *)s;
-	index = (strlen(str) - 1);
+	index = 0;
+	str = (unsigned char *)s;
+	index = (strlen((char *)s) - 1);
 	while (index != -1)
 	{
 		if (str[index] == (unsigned char)c)
 		{
-			return (str + index);
+			return ((char *)s + index);
 		}
 		index--;
 	}
-        return (NULL);
-}
-
-int main( void )
-{
-    char buffer[80];
-    char* where;
-    
-	strcpy( buffer, "video x-rxays" );
-    where = ft_strrchr( buffer, 'e' );
-
-    if( where == NULL ) {
-   	printf( "'x' not found \n");
-	 } else {
-        printf( "'x' found: %s\n", where );
-    }
-
-    return EXIT_SUCCESS;
+	return (NULL);
 }
