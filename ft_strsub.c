@@ -1,6 +1,18 @@
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/01/24 18:54:14 by vde-mene          #+#    #+#             */
+/*   Updated: 2016/01/24 18:58:37 by vde-mene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char	*ft_strsub(char	const *s, unsigned int	start, size_t len)
+#include "libft.h"
+
+char		*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
 	size_t	i;

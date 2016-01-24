@@ -1,8 +1,20 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/01/24 18:24:17 by vde-mene          #+#    #+#             */
+/*   Updated: 2016/01/24 18:24:55 by vde-mene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void	ft_putstr(char const *s)
+#include "libft.h"
+
+void		ft_putstr_fd(char const *s, int fd)
 {
-	int	i;
+	int		i;
 	char	letter;
 
 	i = 0;
@@ -12,10 +24,4 @@ void	ft_putstr(char const *s)
 		write(fd, &letter, 1);
 		i++;
 	}
-}
-
-int	 main(void)
-{
-	ft_putstr("bonjour vincent");
-	return (0);
 }

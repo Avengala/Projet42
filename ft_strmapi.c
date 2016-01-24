@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/01/24 18:34:03 by vde-mene          #+#    #+#             */
+/*   Updated: 2016/01/24 18:34:45 by vde-mene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char	*ft_strmapi.c(char *s, char (*f)(unsigned int, char))
+char		*ft_strmapi(char *s, char (*f)(unsigned int, char))
 {
 	char	*str;
 	size_t	index;
@@ -8,10 +20,6 @@ char	*ft_strmapi.c(char *s, char (*f)(unsigned int, char))
 	if (s != NULL && f != NULL)
 	{
 		str = (char *)malloc(sizeof(*str) * ft_strlen(s));
-		if (str == NULL)
-		{
-			reutnr (NULL);
-		}
 		index = 0;
 		while (s[index] != '\0')
 		{
@@ -20,5 +28,5 @@ char	*ft_strmapi.c(char *s, char (*f)(unsigned int, char))
 		}
 		return (str);
 	}
-	return (0);	
+	return (0);
 }

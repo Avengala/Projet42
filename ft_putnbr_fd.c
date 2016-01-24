@@ -1,6 +1,18 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/01/24 18:22:02 by vde-mene          #+#    #+#             */
+/*   Updated: 2016/01/24 19:07:56 by vde-mene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void	ft_putnbr(int n)
+#include "libft.h"
+
+void	ft_putnbr_fd(int n, int fd)
 {
 	if (n < 0)
 	{
@@ -14,16 +26,7 @@ void	ft_putnbr(int n)
 	}
 	else
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		ft_putnbr_fd(n / 10);
+		ft_putnbr_fd(n % 10);
 	}
-}
-
-int	main(void)
-{
-	int	nb;
-
-	nb = -21474836;
-	ft_putnbr(nb);
-	return (0);
 }

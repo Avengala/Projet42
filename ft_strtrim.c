@@ -1,12 +1,22 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/01/24 18:54:58 by vde-mene          #+#    #+#             */
+/*   Updated: 2016/01/24 18:57:52 by vde-mene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char	*ft_strtrim(char const *s)
+#include "libft.h"
+
+char		*ft_strtrim(char const *s)
 {
 	char	*str;
-	int	j;
-	
+	int		j;
+
 	j = 0;
 	str = (char *)malloc(sizeof(char) * (strlen(s) + 1));
 	if (s != NULL && str != NULL)
@@ -29,23 +39,4 @@ char	*ft_strtrim(char const *s)
 		return (str);
 	}
 	return (NULL);
-}
-
-int main( void )
-{
-    char buffer[80];
-    char* where;
-    char i;
-        i = 'I';
-    strcpy( buffer, "     ta mere	marc     " );
-
-    where = ft_strtrim(buffer);
-	
-    if( where == NULL ) {
-        printf( "'x' not found\n" );
-    } else {
-        printf( "'x' found:%s\n", where );
-    }
-
-    return EXIT_SUCCESS;
 }

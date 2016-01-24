@@ -1,6 +1,16 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/01/24 18:36:13 by vde-mene          #+#    #+#             */
+/*   Updated: 2016/01/24 18:52:33 by vde-mene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 static char	*ft_strsubb(char const *s, unsigned int start, size_t len)
 {
@@ -38,13 +48,11 @@ static int	ft_count_word(char const *s, char c)
 
 char		**ft_strsplit(char const *s, char c)
 {
-	char		**str;
+	char	**str;
 	int		i;
 	int		j;
 	int		l;
-	int		x;
 
-	x = 0;
 	i = 0;
 	j = 0;
 	if (s == NULL)
@@ -55,40 +63,14 @@ char		**ft_strsplit(char const *s, char c)
 	while (i < l)
 	{
 		j = 0;
-		while (s[x] !='\0' && s[x] == c)
-			x++;
-		while (s[x] && s[x] != c)
-			x++;
+		while (*s != '\0' && *s == c)
+			s++;
+		while (*s != '\0' && *s != c)
+			j++;
 		*(str++) = ft_strsubb(s, 0, j);
-		s[x + j];
+		s = s + j;
 		i++;
 	}
-	printf("%s s", *str);
 	*str = NULL;
 	return (str - l);
-}
-int main( void )
-{
-    char buffer[80];
-    char** where;
-    char i;
-	int a = 0;
-	int b = 0;
-        i = 'I';
-    strcpy( buffer, "  ta     m er e   marc     " );
-
-    where = ft_strsplit(buffer, ' ');
-	while(where[a][b] != '\0')
-	{
-		while( where[a][b] != '\0')
-		{
-			printf("%c", where[a][b]);
-    			b++;
-		}
-		b = 0;
-		printf("\n");
-		a++;
-	}
-	printf("bnjour");
-	return EXIT_SUCCESS;
 }
