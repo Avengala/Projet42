@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-char		*ft_strmapi(char *s, char (*f)(unsigned int, char))
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;
-	size_t	index;
+	int	index;
 
 	if (s != NULL && f != NULL)
 	{
@@ -23,7 +23,7 @@ char		*ft_strmapi(char *s, char (*f)(unsigned int, char))
 		index = 0;
 		while (s[index] != '\0')
 		{
-			str[index] = f(i, s[index]);
+			str[index] = f(index, s[index]);
 			index++;
 		}
 		return (str);

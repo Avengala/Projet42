@@ -18,7 +18,7 @@ char		*ft_strnew(size_t size)
 	size_t	index;
 
 	index = 0;
-	str = (char *)malloc(sizeof(*s) * size);
+	str = (char *)malloc(sizeof(*str) * size);
 	if (str == NULL)
 	{
 		str[index] = '\0';
