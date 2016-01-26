@@ -6,11 +6,11 @@
 /*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 12:35:30 by vde-mene          #+#    #+#             */
-/*   Updated: 2015/11/27 12:38:54 by vde-mene         ###   ########.fr       */
+/*   Updated: 2016/01/26 18:52:00 by vde-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libtf.h"
+#include "libft.h"
 
 void	*ft_strdup(const char *s1)
 {
@@ -19,7 +19,7 @@ void	*ft_strdup(const char *s1)
 	int		index;
 
 	index = 0;
-	size = (strlen(s1) + 1);
+	size = (ft_strlen(s1) + 1);
 	if (!s1)
 	{
 		return (NULL);

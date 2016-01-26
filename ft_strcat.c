@@ -6,7 +6,7 @@
 /*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 13:01:10 by vde-mene          #+#    #+#             */
-/*   Updated: 2015/11/27 13:01:53 by vde-mene         ###   ########.fr       */
+/*   Updated: 2016/01/26 18:51:41 by vde-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strcat(char *s1, const char *s2)
 
 	size = 0;
 	index = 0;
-	index = strlen(s1);
+	index = ft_strlen(s1);
 	while (s2[size] != '\0')
 	{
 		s1[index] = s2[size];

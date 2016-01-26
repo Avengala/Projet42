@@ -6,7 +6,7 @@
 /*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/24 18:36:13 by vde-mene          #+#    #+#             */
-/*   Updated: 2016/01/24 18:52:33 by vde-mene         ###   ########.fr       */
+/*   Updated: 2016/01/26 18:50:50 by vde-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ char		**ft_strsplit(char const *s, char c)
 	if (s == NULL)
 		return (NULL);
 	l = ft_count_word(s, c) - 1;
-	printf("test l : %d\n", l);
 	str = (char **)malloc(sizeof(char *) * l + 1);
 	while (i < l)
 	{

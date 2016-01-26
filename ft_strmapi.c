@@ -6,7 +6,7 @@
 /*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/24 18:34:03 by vde-mene          #+#    #+#             */
-/*   Updated: 2016/01/24 18:34:45 by vde-mene         ###   ########.fr       */
+/*   Updated: 2016/01/26 17:31:58 by vde-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;
-	int	index;
+	int		index;
 
 	if (s != NULL && f != NULL)
 	{

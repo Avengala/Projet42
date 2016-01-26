@@ -6,7 +6,7 @@
 /*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/24 18:54:58 by vde-mene          #+#    #+#             */
-/*   Updated: 2016/01/24 18:57:52 by vde-mene         ###   ########.fr       */
+/*   Updated: 2016/01/26 19:01:06 by vde-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ char		*ft_strtrim(char const *s)
 	int		j;
 
 	j = 0;
-	str = (char *)malloc(sizeof(char) * (strlen(s) + 1));
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (s != NULL && str != NULL)
 	{
-		str = strcpy(str, s);
+		str = ft_strcpy(str, s);
 		while (str[j] == '\n' || str[j] == '\t' || str[j] == ' ')
 			j++;
-		str = strchr(str, str[j]);
-		j = strlen(str);
+		str = ft_strchr(str, str[j]);
+		j = ft_strlen(str);
 		while (j != 0)
 		{
 			if (str[j] == '\n' || str[j] == ' ' || str[j] == '\t')

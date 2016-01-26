@@ -6,7 +6,7 @@
 /*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 13:45:05 by vde-mene          #+#    #+#             */
-/*   Updated: 2015/11/27 13:45:07 by vde-mene         ###   ########.fr       */
+/*   Updated: 2016/01/26 19:00:29 by vde-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strrchr(const char *s, int c)
 
 	index = 0;
 	str = (unsigned char *)s;
-	index = (strlen((char *)s) - 1);
-	while (index != -1)
+	index = (ft_strlen((char *)s) - 1);
+	while (str[index])
 	{
 		if (str[index] == (unsigned char)c)
 		{

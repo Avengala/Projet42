@@ -6,7 +6,7 @@
 /*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 11:41:39 by vde-mene          #+#    #+#             */
-/*   Updated: 2015/11/27 11:45:43 by vde-mene         ###   ########.fr       */
+/*   Updated: 2016/01/26 19:15:09 by vde-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 		string[index] = str[index];
 		if (string[index] == (unsigned char)c)
 		{
-			return (dest);
+			return (dest + index + 1);
 		}
 		index++;
 		n--;
 	}
-	return (0);
+	return (NULL);
 }

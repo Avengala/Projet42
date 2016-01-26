@@ -6,7 +6,7 @@
 /*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 11:04:01 by vde-mene          #+#    #+#             */
-/*   Updated: 2016/01/24 18:57:13 by vde-mene         ###   ########.fr       */
+/*   Updated: 2016/01/26 19:24:36 by vde-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *s1, const char *s2);
 char				*ft_strnstr(const char *s1, const char *s2, size_t n);
-int					*ft_strcmp(const char *s1, const char *s2);
-int					*ft_strncmp(char *s1, char *s2, size_t n);
+int					ft_strcmp(const char *s1, const char *s2);
+int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
@@ -81,4 +81,5 @@ void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstister(t_list *lst, void (*f)(t_list *elem));
+int					ft_abs(int n);
 #endif
