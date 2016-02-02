@@ -6,35 +6,23 @@
 /*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 12:35:30 by vde-mene          #+#    #+#             */
-/*   Updated: 2016/01/26 18:52:00 by vde-mene         ###   ########.fr       */
+/*   Updated: 2016/02/02 19:10:38 by vde-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_strdup(const char *s1)
+char		*ft_strdup(const char *s1)
 {
 	char	*str;
-	int		size;
-	int		index;
+	int		len;
 
-	index = 0;
-	size = (ft_strlen(s1) + 1);
-	if (!s1)
+	len = (ft_strlen(s1) + 1);
+	str = (char *)malloc(sizeof(char) * (len));
+	if (s1 != NULL && str != NULL)
 	{
-		return (NULL);
+		str = ft_strcpy(str, s1);
+		return (str);
 	}
-	str = (char *)malloc(sizeof(char) * (size));
-	if (!str)
-	{
-		return (NULL);
-	}
-	while (index <= size)
-	{
-		str[index] = s1[index];
-		index++;
-	}
-	str[index] = '\0';
-	free(str);
-	return (str);
+	return (NULL);
 }

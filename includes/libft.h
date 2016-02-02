@@ -6,7 +6,7 @@
 /*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 11:04:01 by vde-mene          #+#    #+#             */
-/*   Updated: 2016/01/26 19:24:36 by vde-mene         ###   ########.fr       */
+/*   Updated: 2016/02/02 19:03:57 by vde-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void				*ft_memmove(void *dst, const void *src, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_strlen(const char *s);
-void				*ft_strdup(const char *s1);
+char				*ft_strdup(const char *s1);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strncpy(char *dst, const char *src, size_t n);
 char				*ft_strcat(char *s1, const char *s2);
