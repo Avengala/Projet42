@@ -6,13 +6,13 @@
 /*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 15:39:30 by vde-mene          #+#    #+#             */
-/*   Updated: 2015/11/27 16:13:33 by vde-mene         ###   ########.fr       */
+/*   Updated: 2016/02/03 18:54:30 by vde-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+int			ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	index;
 	size_t	n2;
@@ -28,5 +28,5 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 		index++;
 		n2--;
 	}
-	return (s1[index] - s2[index]);
+	return ((unsigned char)s1[index] - (unsigned char)s2[index]);
 }

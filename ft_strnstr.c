@@ -6,7 +6,7 @@
 /*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 14:37:22 by vde-mene          #+#    #+#             */
-/*   Updated: 2015/11/27 14:41:10 by vde-mene         ###   ########.fr       */
+/*   Updated: 2016/02/03 18:51:51 by vde-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,23 @@
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	size_t	index;
 	size_t	i;
 	size_t	j;
 
-	index = 0;
-	if (s2[index] == '\0')
+	i = 0;
+	if (s2[i] == '\0')
 		return ((char *)(s1));
-	while (n != 0)
+	while (s1[i] && i < n)
 	{
-		i = index;
-		j = 0;
-		while (s1[i] == s2[j])
+		if (s1[i] == s2[0])
 		{
-			i++;
-			j++;
-			if (s2[j] == '\0')
-			{
-				return ((char*)(&s1[index]));
-			}
+			j = 0;
+			while (s2[j] && s1[i + j] == s2[j] && (i + j) < n)
+				j++;
+			if(!s2[j])
+				return ((char *)s1 + i);
 		}
-		index++;
-		n--;
+		i++;
 	}
 	return (NULL);
 }

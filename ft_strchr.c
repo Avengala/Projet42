@@ -6,26 +6,22 @@
 /*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 13:31:37 by vde-mene          #+#    #+#             */
-/*   Updated: 2015/11/27 13:38:17 by vde-mene         ###   ########.fr       */
+/*   Updated: 2016/02/03 18:33:15 by vde-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char		*ft_strchr(const char *s, int c)
 {
-	unsigned char	*str;
-	size_t			index;
+	size_t	index;
 
 	index = 0;
-	str = (unsigned char *)s;
-	while (str[index] != '\0')
+	while (s[index] != c && s[index] != '\0')
 	{
-		if (str[index] == (unsigned char)c)
-		{
-			return ((char *)s + index);
-		}
 		index++;
 	}
+	if (s[index] == c || c == '\0')
+		return (char *)(&s[index]);
 	return (NULL);
 }

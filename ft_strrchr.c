@@ -6,7 +6,7 @@
 /*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 13:45:05 by vde-mene          #+#    #+#             */
-/*   Updated: 2016/01/26 19:00:29 by vde-mene         ###   ########.fr       */
+/*   Updated: 2016/02/03 18:37:59 by vde-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned char	*str;
-	size_t			index;
+	int	index;
 
-	index = 0;
-	str = (unsigned char *)s;
-	index = (ft_strlen((char *)s) - 1);
-	while (str[index])
+	index = (ft_strlen(s));
+	while (s[index] != c && index >= 0)
 	{
-		if (str[index] == (unsigned char)c)
-		{
-			return ((char *)s + index);
-		}
 		index--;
 	}
+	if (s[index] == c || c == '\0')
+		return (char *)(&s[index]);
 	return (NULL);
 }
