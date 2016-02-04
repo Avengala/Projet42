@@ -6,7 +6,7 @@
 /*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/24 18:34:03 by vde-mene          #+#    #+#             */
-/*   Updated: 2016/01/26 17:31:58 by vde-mene         ###   ########.fr       */
+/*   Updated: 2016/02/04 18:38:03 by vde-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,15 @@ char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*str;
 	int		index;
 
-	if (s != NULL && f != NULL)
+	str = ft_strnew(ft_strlen(s));
+	if (s != NULL && f != NULL && str != NULL)
 	{
-		str = (char *)malloc(sizeof(*str) * ft_strlen(s));
 		index = 0;
 		while (s[index] != '\0')
 		{
 			str[index] = f(index, s[index]);
 			index++;
 		}
-		return (str);
 	}
-	return (0);
+	return (str);
 }

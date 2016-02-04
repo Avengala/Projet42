@@ -6,7 +6,7 @@
 /*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/24 18:35:49 by vde-mene          #+#    #+#             */
-/*   Updated: 2016/01/24 18:59:04 by vde-mene         ###   ########.fr       */
+/*   Updated: 2016/02/04 18:22:11 by vde-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,11 @@
 char		*ft_strnew(size_t size)
 {
 	char	*str;
-	size_t	index;
 
-	index = 0;
-	str = (char *)malloc(sizeof(*str) * size);
+	str = ft_memalloc(size + 1);
 	if (str == NULL)
 	{
-		str[index] = '\0';
-		index++;
+		return (NULL);
 	}
 	return (str);
 }

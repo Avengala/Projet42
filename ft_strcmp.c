@@ -6,7 +6,7 @@
 /*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 14:44:56 by vde-mene          #+#    #+#             */
-/*   Updated: 2016/02/03 18:56:25 by vde-mene         ###   ########.fr       */
+/*   Updated: 2016/02/04 18:33:12 by vde-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ int		ft_strcmp(const char *s1, const char *s2)
 	{
 		if (size_s1[index] != size_s2[index])
 		{
-			return ((unsigned char)size_s1[index] - (unsigned char)size_s2[index]);
+			return ((unsigned char)size_s1[index] -
+			(unsigned char)size_s2[index]);
 		}
 		index++;
 	}

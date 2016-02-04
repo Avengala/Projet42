@@ -6,7 +6,7 @@
 /*   By: vde-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 14:37:22 by vde-mene          #+#    #+#             */
-/*   Updated: 2016/02/03 18:51:51 by vde-mene         ###   ########.fr       */
+/*   Updated: 2016/02/04 18:34:03 by vde-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 			j = 0;
 			while (s2[j] && s1[i + j] == s2[j] && (i + j) < n)
 				j++;
-			if(!s2[j])
+			if (!s2[j])
 				return ((char *)s1 + i);
 		}
 		i++;
